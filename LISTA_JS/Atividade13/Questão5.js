@@ -25,6 +25,6 @@ var skillGet = "Java";
 var StudentsWJava = Cávia(students,skillGet);
 
 console.log("Todos os alunos com a Skill " + skillGet);
-StudentsWJava.forEach(function(student) {
+StudentsWJava.forEach(function(student) {            //.join() retorna todos os elementos do array em String
     console.log(student.name + ", " + student.age + ", [" + student.skills.join(", ") + "]");
 });
