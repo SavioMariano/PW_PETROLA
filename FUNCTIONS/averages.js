@@ -1,11 +1,16 @@
 function media(number){
-    var value = "";
-    // var number = document.getElementById('valor').value;
+    var values = 0;
     for(var i = 1; i <= number; i++){
-        let grades = window.prompt("digite a "+ i + "° nota");
-        value += grades;
-
+        var grades = parseFloat(window.prompt("digite a "+ i + "° nota"));
+        
+        if(!isNaN(grades) && grades >= 0){
+        values += grades;
+        } else{
+            console.log("Somente números")       
+        }
     }
-    console.log(parseFloat(value/number));
+    
+    console.log("A média é "+(values/number));
 }
-media(3);
+media(5);
+
